@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>REGISTRO</title>
+    </head>
+    <body>
+        <h1>REGISTRO</h1>
+        <form>
+            <fieldset>
+                <label for="txtnombre">Nombre:</label>
+                <input name="nombre" id="txtnombre" type="text" required><br>
+                <label for="txtapellido">Apellido:</label>
+                <input name="apellido" id="txtapellido" type="text" required><br>
+                <label for="txtcorreo">Correo Electrónico:</label>
+                <input name="correo" id="txtcorreo" type="email" required><br>
+                <label for="txttelefono">Teléfono:</label>
+                <!-- Expresion regular para validar numeros del tipo: 0998466067 -->
+                <input name="telefono" type="text" pattern="^0[9|8]\d{8}$" ><br>
+                <label for="constraseña">Contraseña:</label>
+                <input name="contraseña" type="password" minlength="8" required><br>
+                <label for="cmbCargo">Cargo:</label>
+                <select name="cargo" id="cmbCargo">
+                    <option value="1">Director</option>
+                    <option value="2">Operador</option>
+                    <option value="3">Supervisor</option>
+                </select><br>
+                <input type="submit" name="enviar" value="Enviar">
+
+            </fieldset>
+        </form>
+    </body>
+</html>
